@@ -1,0 +1,10 @@
+#rstudioapi::openProject("/home/rstudio/equity_analysis/")
+folder_number <- readline(prompt=paste("What is the name of this folder?", sep=" "))
+trials_path <- file.path(folder_number, "trials/")
+parameters_path <- file.path(folder_number, "parameters.R")
+file.copy(parameters_path, "scripts/", overwrite=T)
+dir.create("trials")
+fil <- list.files(trials_path, full.names = T)
+file.copy(from = fil, to = "trials", 
+          overwrite = TRUE, recursive = FALSE, copy.mode = TRUE)
+source("scripts/0_all.R")

@@ -1,0 +1,15 @@
+Key	Index	Purpose		 	Description
+1	JALSH	Data Quality		JALSH Run all the way to end data quality / no trading. No trials needed.
+2	sim	PBO			Simulated data / 4 years / no transaction costs / rebalance daily / trade daily / random algo x 50
+3	sim	PBO			Same as 2 but rebalance weekly
+4	sim	PBO			Same as 2 but rebalance monthly
+5	sim	PBO			Same as 2 but rebalance quarterly
+6	sim	PBO			Same as 2 but rebalance yearly
+7 	sim	PBO			Same as 2 but rebalance never
+8/A	sim	Engine Correctness	Same as 2 but market cap algo: compare to sum(mkt_cap)
+9/B	sim	Engine Correctness	Same as 8 but rebalance monthly: expect lover correl
+10/C	sim	Engine Correctness	Same as 8 but rebalance quarterly: expect lower correl
+11/D	sim	Engine Correctness	Same as 8 but 0.5% transaction costs
+12/E	sim	Engine Correctness	Same as 8 but 5% transaction costs
+13/F	sim	Engine Correctness	Same as 11 but portfolio 10000: expect transaction costs to eat portolio
+14/G	sim	Engine Correctness	Same as 9 but equally weighted: plot % per stock over time: expect to converge to equal
